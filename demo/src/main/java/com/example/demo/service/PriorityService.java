@@ -18,8 +18,8 @@ public class PriorityService {
     }
 
 
-    public String saveRequest(List<Priority> priorityList) {
-        if (null != priorityRepository.save(priorityList))
+    public String saveRequest(Priority priority) {
+        if (null != priorityRepository.save(priority))
             return "Success";
         else
             return "Failed";

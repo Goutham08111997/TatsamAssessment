@@ -4,18 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Map;
 
 @Entity
-public class Priority {
+public class PriorityArea {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private  int id;
 
-    private Map<String, PriorityData> priorityAreaMap;
+    private String areaName;
 
-    public Priority() {
+
+    public PriorityArea() {
     }
 
     public int getId() {
@@ -26,11 +26,11 @@ public class Priority {
         this.id = id;
     }
 
-    public Map<String, PriorityData> getPriorityAreaMap() {
-        return priorityAreaMap;
+    public String getAreaName() {
+        return areaName;
     }
 
-    public void setPriorityAreaMap(Map<String, PriorityData> priorityAreaMap) {
-        this.priorityAreaMap = priorityAreaMap;
+    public void setAreaName(String areaName) {
+        this.areaName = areaName;
     }
 }

@@ -8,5 +8,5 @@ import java.util.List;
 public interface PriorityRepository extends JpaRepository<Priority, Integer> {
 
 
-    List<Priority> save(List<Priority> priorityList);
+    Priority save(Priority priority);
 }

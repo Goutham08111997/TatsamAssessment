@@ -19,15 +19,9 @@ public class PriorityController {
     @Autowired
     PriorityService priorityService;
 
-    @GetMapping("/priorities")
-    public List<Priority> getPriorities() {
-
-        return priorityService.getPriorities();
-    }
-
-    @PostMapping()
-    public ResponseEntity<String> createPriority(@RequestBody List<Priority> priorityList) {
-        String response = priorityService.saveRequest(priorityList);
+    @PostMapping("users/{id}/priority")
+    public ResponseEntity<String> createPriority(@RequestBody Priority priority) {
+        String response = priorityService.saveRequest(priority);
 
         if ("Success".equals(response))
             return new ResponseEntity<>(HttpStatus.OK);
