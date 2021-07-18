@@ -9,4 +9,7 @@ public interface PriorityRepository extends JpaRepository<Priority, Integer> {
 
 
     Priority save(Priority priority);
+
+    Priority findByUserId(int userId);
+
 }

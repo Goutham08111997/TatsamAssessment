@@ -24,4 +24,9 @@ public class PriorityService {
         else
             return "Failed";
     }
+
+    public  Priority getPriorityByUserId(int userId){
+
+        return priorityRepository.findByUserId(userId);
+    }
 }

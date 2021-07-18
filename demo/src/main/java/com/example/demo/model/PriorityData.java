@@ -2,21 +2,11 @@ package com.example.demo.model;
 
 public class PriorityData {
 
-    private  int id;
-
     private  int priority;
 
     private int satisfactionRating;
 
     public PriorityData() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getPriority() {
